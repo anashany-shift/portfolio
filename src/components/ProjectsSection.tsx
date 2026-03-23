@@ -20,11 +20,44 @@ const projects = [
     title: "Super Fitness",
     desc: "Collaborative fitness app with personalized workouts and a Gemini-powered AI coach.",
     tags: ["Flutter", "BLoC", "Retrofit", "Gemini AI"],
-    github: "",
+    github: "https://github.com/anashany-shift/fiitness_app",
     web: "",
     playStore: "",
     appStore: "",
     icon: "https://api.dicebear.com/9.x/shapes/svg?seed=fitness",
+    url: ""
+  },
+  {
+    title: "Islami App",
+    desc: "Feature-rich Islamic app including Quran, Ahadith, Sebha, Radio, theming, and localization.",
+    tags: ["Flutter", "Quran", "Ahadith", "Localization", "Theming"],
+    github: "https://github.com/anashany-shift/Islami-App",
+    web: "",
+    playStore: "",
+    appStore: "",
+    icon: "https://api.dicebear.com/9.x/shapes/svg?seed=islami",
+    url: ""
+  },
+  {
+    title: "E-Commerce App",
+    desc: "Complete E-commerce solution with usual shopping features, cart, and payment flow.",
+    tags: ["Flutter", "E-Commerce", "API"],
+    github: "https://github.com/anashany-shift/ecommerce-app-route",
+    web: "",
+    playStore: "",
+    appStore: "",
+    icon: "https://api.dicebear.com/9.x/shapes/svg?seed=ecommerce",
+    url: ""
+  },
+  {
+    title: "ToDo App",
+    desc: "Task management application to keep track of daily goals.",
+    tags: ["Flutter", "Task Management"],
+    github: "https://github.com/anashany-shift/ToDo_app",
+    web: "",
+    playStore: "",
+    appStore: "",
+    icon: "https://api.dicebear.com/9.x/shapes/svg?seed=todo",
     url: ""
   }
 ];
@@ -183,12 +216,31 @@ const ProjectsSection = () => {
                           <Apple size={14} /> App Store
                         </a>
                       )}
-                      <button
-                        onClick={(e) => { e.stopPropagation(); openAndScrollToApp(proj.url); }}
-                        className="flex items-center gap-1.5 text-xs font-medium px-4 py-1.5 rounded-lg bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20 hover:shadow-[0_0_10px_rgba(var(--primary),0.3)] transition-all duration-300 ml-auto"
-                      >
-                        <Play size={14} className="fill-current" /> Run
-                      </button>
+                      {proj.url ? (
+                        <button
+                          onClick={(e) => { e.stopPropagation(); openAndScrollToApp(proj.url); }}
+                          className="flex items-center gap-1.5 text-xs font-medium px-4 py-1.5 rounded-lg bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20 hover:shadow-[0_0_10px_rgba(var(--primary),0.3)] transition-all duration-300 ml-auto"
+                        >
+                          <Play size={14} className="fill-current" /> Run
+                        </button>
+                      ) : proj.github ? (
+                        <a
+                          href={proj.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                          className="flex items-center gap-1.5 text-xs font-medium px-4 py-1.5 rounded-lg bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20 hover:shadow-[0_0_10px_rgba(var(--primary),0.3)] transition-all duration-300 ml-auto"
+                        >
+                          <Github size={14} className="fill-current" /> Source
+                        </a>
+                      ) : (
+                        <button
+                          onClick={(e) => { e.stopPropagation(); openAndScrollToApp(proj.url); }}
+                          className="flex items-center gap-1.5 text-xs font-medium px-4 py-1.5 rounded-lg bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20 hover:shadow-[0_0_10px_rgba(var(--primary),0.3)] transition-all duration-300 ml-auto"
+                        >
+                          <Play size={14} className="fill-current" /> Run
+                        </button>
+                      )}
                     </div>
                   </div>
                 </motion.div>

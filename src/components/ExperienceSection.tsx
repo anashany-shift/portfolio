@@ -2,6 +2,22 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
+    role: "Computer Science Student",
+    company: "Higher Technology Institute, 10th of Ramadan",
+    period: "Present",
+    points: [
+      "Studying Computer Science with focus on software engineering.",
+    ],
+  },
+  {
+    role: "DevOps Training",
+    company: "ITI (Information Technology Institute)",
+    period: "4 Months",
+    points: [
+      "Completed intensive DevOps training focusing on CI/CD, cloud, and infrastructure.",
+    ],
+  },
+  {
     role: "Flutter Basics",
     company: "Route Academy",
     period: "Jun 2024 – Oct 2024",

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { ChevronLeft, Lock } from "lucide-react";
+import { ChevronLeft, Lock, Smartphone } from "lucide-react";
 
 interface AppData {
     id?: string;
@@ -129,11 +129,11 @@ const IPhoneHomeScreen = ({ activeAppUrl: externalAppUrl, onAppOpen, onAppClose,
                                 {/* Content */}
                                 <div className="relative z-10 flex flex-col items-center justify-center p-6 text-center">
                                     <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(var(--primary),0.3)] backdrop-blur-sm">
-                                        <Lock className="w-8 h-8 text-white/80" />
+                                        <Smartphone className="w-8 h-8 text-white/80" />
                                     </div>
-                                    <h3 className="text-xl font-bold text-white mb-3">Authentication Required</h3>
+                                    <h3 className="text-xl font-bold text-white mb-3">Developer Mode</h3>
                                     <p className="text-sm text-white/60 leading-relaxed mb-8 px-4">
-                                        This project is currently under active development. Live preview will be available soon.
+                                        Running in developer mode on Emulator.
                                     </p>
                                     
                                     <div className="w-full h-1 bg-white/10 rounded-full overflow-hidden">
